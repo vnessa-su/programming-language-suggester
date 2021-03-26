@@ -25,10 +25,12 @@ $(document).ready(function(){
   let csharpCount = 0;
   let rubyCount = 0;
   let javascriptCount = 0;
+
   $("#startQuizButton").click(function(){
     $(this).hide();
     $("#firstQuestion").show();
   });
+
   $(".answer-button").click(function(){
     const answerType = $(this).val();
     console.log(answerType + " answer button pressed");
@@ -52,9 +54,14 @@ $(document).ready(function(){
     if(cardId === "lastQuestion"){
       let resultOutputString = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
       $("#suggestedLanguage").text(resultOutputString);
-      $("#suggestedLanguageDisplay").show();
+      $("#quizCompleteDisplay").show();
     } else {
       $(this).closest(".card").next(".question-card").show();
     }
   });
+
+  $("#seeResultsButton").click(function(){
+    $(this).closest("div").hide();
+    $("#suggestedLanguageDisplay").show();
+  })
 });
