@@ -1,3 +1,26 @@
+// ----- Business Logic -----
+function determineSuggestedLanguage(csharpSelectedCount, rubySelectedCount, javascriptSelectedCount) {
+  let highestCount = csharpSelectedCount;
+  let resultString = "C#";
+
+  if(rubySelectedCount > highestCount) {
+    highestCount = rubySelectedCount;
+    resultString = "Ruby";
+  } else if(rubySelectedCount === highestCount) {
+    resultString = resultString + " or Ruby";
+  }
+
+  if(javascriptSelectedCount > highestCount) {
+    highestCount = javascriptSelectedCount;
+    resultString = "JavaScript";
+  } else if(javascriptSelectedCount === highestCount) {
+    resultString = resultString + " or JavaScript";
+  }
+
+  return resultString;
+}
+
+// ----- User Interface Logic -----
 $(document).ready(function(){
   let csharpCount = 0;
   let rubyCount = 0;
@@ -27,6 +50,8 @@ $(document).ready(function(){
 
     $(this).closest(".card").hide();
     if(cardId === "lastQuestion"){
+      let resultOutputString = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
+      $("#suggestedLanguage").text(resultOutputString);
       $("#suggestedLanguageDisplay").show();
     } else {
       $(this).closest(".card").next(".question-card").show();
