@@ -1,8 +1,8 @@
-# _{Application Name}_
+# Programming Language Suggester
 
-#### _{Brief description of application}, {Date of current version}_
+#### Suggests a programming language based on a user's answer selections.
 
-#### By _**{List of contributors}***_
+#### By Vanessa Su
 
 ## Description
 
@@ -46,10 +46,10 @@ _No known bugs_
 
 ## Contact Information
 
-_For any questions or comments, please reach out through GitHub._
+For any questions or comments, please reach out through GitHub.
 
 ### License
 
 [MIT License](license)
 
-Copyright (c) [year] [names]
+Copyright (c) 2021 Vanessa Su
