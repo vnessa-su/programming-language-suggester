@@ -21,7 +21,7 @@
   </div>
   
 
-  <form id="userInputForm" class="p-3">
+  <form id="userInputForm" class="p-3 flex-column">
     <div class="form-group">
       <input type="text" id="userName" class="form-control form-control-lg form-input" placeholder="Enter name">
     </div>
@@ -149,9 +149,9 @@
     </div>
   </div>
 
-  <div class="display-result" id="quizCompleteDisplay">
-    <h3>You've finished the quiz<span id="userNameDisplay"></span>!</h3>
-    <button type="button" class="btn btn-secondary btn-lg" id="seeResultsButton">See Results!</button>
+  <div class="flex-column display-result" id="quizCompleteDisplay">
+    <h3 class="text-center">You've finished the quiz<span id="userNameDisplay"></span>!</h3>
+    <button type="button" class="btn btn-secondary btn-lg results-button" id="seeResultsButton">See Results!</button>
   </div>
 
   <div class="display-result" id="suggestedLanguageDisplay">

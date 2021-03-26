@@ -1,6 +1,12 @@
 .form-input {
   min-width: 200px;
   max-width: 25%;
+  margin: auto;
+}
+
+#startQuizButton {
+  display: block;
+  margin: auto;
 }
 
 .question-card {
@@ -17,4 +23,10 @@
 .answer-button {
   margin: 5px;
   font-family: 'Roboto', sans-serif;
+}
+
+.results-button {
+  width: 200px;
+  display: block;
+  margin: auto;
 }
