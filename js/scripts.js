@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("#startQuizButton").click(function(){
     $(this).hide();
-    $("#questionOne").show();
+    $("#firstQuestion").show();
   });
   $(".answer-button").click(function(){
     let answerType = $(this).val();
