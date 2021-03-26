@@ -37,3 +37,12 @@
   padding: 5%;
   font-family: 'Anton', sans-serif;
 }
+.page-background {
+  background-image: url('../img/code-background.jpg');
+  height: 100vh;
+}
+
+.light-text-outlined {
+  color: lightgray;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
