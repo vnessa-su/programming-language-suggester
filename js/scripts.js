@@ -1,23 +1,23 @@
 // ----- Business Logic -----
 function determineSuggestedLanguage(csharpSelectedCount, rubySelectedCount, javascriptSelectedCount) {
   let highestCount = csharpSelectedCount;
-  let resultString = "C#";
+  let resultArray = ["C#"];
 
   if(rubySelectedCount > highestCount) {
     highestCount = rubySelectedCount;
-    resultString = "Ruby";
+    resultArray = ["Ruby"];
   } else if(rubySelectedCount === highestCount) {
-    resultString = resultString + " or Ruby";
+    resultArray.push("Ruby");
   }
 
   if(javascriptSelectedCount > highestCount) {
     highestCount = javascriptSelectedCount;
-    resultString = "JavaScript";
+    resultArray = ["JavaScript"];
   } else if(javascriptSelectedCount === highestCount) {
-    resultString = resultString + " or JavaScript";
+    resultArray.push("JavaScript");
   }
 
-  return resultString;
+  return resultArray;
 }
 
 // ----- User Interface Logic -----
@@ -51,7 +51,7 @@ $(document).ready(function(){
     } else if(answerType === "javascript-answer") {
       javascriptCount++;
     } else {
-      throw new Error("Invalid answer-button value");
+      throw new Error("Invalid answer-button value: " + answerType);
     }
 
     console.log('csharp count: ' + csharpCount);
@@ -60,8 +60,20 @@ $(document).ready(function(){
 
     $(this).closest(".card").hide();
     if(cardId === "lastQuestion"){
-      let resultOutputString = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
-      $("#suggestedLanguage").text(resultOutputString);
+      let resultOutputArray = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
+      if(resultOutputArray.indexOf("C#") > -1) {
+        $("#csharpColumn").load("csharp.html");
+        $("#csharpColumn").show();
+      }
+      if(resultOutputArray.indexOf("Ruby") > -1) {
+        $("#rubyColumn").load("ruby.html");
+        $("#rubyColumn").show();
+      }
+      if(resultOutputArray.indexOf("JavaScript") > -1) {
+        $("#javascriptColumn").load("javascript.html");
+        $("#javascriptColumn").show();
+      }
+
       $("#quizCompleteDisplay").show();
     } else {
       $(this).closest(".card").next(".question-card").show();
