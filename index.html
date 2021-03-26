@@ -16,12 +16,19 @@
   <title>Programming Language Selecter</title>
 </head>
 <body>
-  <div class="jumbotron">
+  <div class="jumbotron p-3">
     <h1 class="display-4 text-center">What programming language should you learn?</h1>
   </div>
   
-  <button type="button" class="btn btn-secondary btn-lg" id="startQuizButton">Start Quiz!</button>
 
+  <form id="userInputForm" class="p-3">
+    <div class="form-group">
+      <input type="text" id="userName" class="form-control form-control-lg form-input" placeholder="Enter name">
+    </div>
+    <button type="submit" class="btn btn-secondary btn-lg" id="startQuizButton">Start Quiz!</button>
+  </form>
+  
+  
   <div class="card question-card" id="firstQuestion">
     <div class="card-body">
       <h3 class="card-title text-center">Question 1</h3>
@@ -143,7 +150,7 @@
   </div>
 
   <div class="display-result" id="quizCompleteDisplay">
-    <h3>You've finished the quiz!</h3>
+    <h3>You've finished the quiz<span id="userNameDisplay"></span>!</h3>
     <button type="button" class="btn btn-secondary btn-lg" id="seeResultsButton">See Results!</button>
   </div>
 

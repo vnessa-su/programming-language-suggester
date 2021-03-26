@@ -26,7 +26,15 @@ $(document).ready(function(){
   let rubyCount = 0;
   let javascriptCount = 0;
 
-  $("#startQuizButton").click(function(){
+  $("#userInputForm").submit(function(event){
+    event.preventDefault();
+    const nameInput = $("input#userName").val();
+
+    if(nameInput) {
+      const nameDisplayString = ", " + nameInput;
+      $("#userNameDisplay").text(nameDisplayString);
+    }
+    
     $(this).hide();
     $("#firstQuestion").show();
   });
