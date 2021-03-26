@@ -1,7 +1,15 @@
 .question-card {
   display: none;
+  margin: auto;
+  max-width: 60%;
+  font-family: 'Anton', sans-serif;
 }
 
 .display-result {
   display: none;
+}
+
+.answer-button {
+  margin: 5px;
+  font-family: 'Roboto', sans-serif;
 }
