@@ -33,8 +33,7 @@
 
 .language-card {
   margin: auto;
-  max-width: 60%;
-  padding: 5%;
+  height: 100%;
   font-family: 'Anton', sans-serif;
 }
 .page-background {
@@ -44,5 +43,5 @@
 
 .light-text-outlined {
   color: lightgray;
-  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
 }
