@@ -20,14 +20,12 @@
     <h1 class="display-4 text-center">What programming language should you learn?</h1>
   </div>
   
-
   <form id="userInputForm" class="p-3 flex-column">
     <div class="form-group">
       <input type="text" id="userName" class="form-control form-control-lg form-input" placeholder="Enter name">
     </div>
     <button type="submit" class="btn btn-secondary btn-lg" id="startQuizButton">Start Quiz!</button>
   </form>
-  
   
   <div class="card question-card" id="firstQuestion">
     <div class="card-body">
@@ -154,10 +152,20 @@
     <button type="button" class="btn btn-secondary btn-lg results-button" id="seeResultsButton">See Results!</button>
   </div>
 
-  <div class="display-result" id="suggestedLanguageDisplay">
-    <p>
-      Based on your answers, you might prefer using <span id="suggestedLanguage"></span>!
-    </p>
+  <div class="" id="suggestedLanguageDisplay">
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center col">
+          Based on your answers, you might prefer using <span id="suggestedLanguage"></span>!
+        </h3>
+      </div>
+
+      <div class="row">
+        <div class="col-4" id="resultColumnOne"></div>
+        <div class="col-4" id="resultColumnTwo"></div>
+        <div class="col-4" id="resultColumnThree"></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
