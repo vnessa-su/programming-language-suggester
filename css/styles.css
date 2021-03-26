@@ -30,3 +30,10 @@
   display: block;
   margin: auto;
 }
+
+.language-card {
+  margin: auto;
+  max-width: 60%;
+  padding: 5%;
+  font-family: 'Anton', sans-serif;
+}
