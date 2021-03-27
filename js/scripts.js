@@ -54,10 +54,6 @@ $(document).ready(function(){
       throw new Error("Invalid answer-button value: " + answerType);
     }
 
-    console.log('csharp count: ' + csharpCount);
-    console.log("ruby count: " + rubyCount);
-    console.log("javascript count: " + javascriptCount);
-
     $(this).closest(".card").hide();
     if(cardId === "lastQuestion"){
       let resultOutputArray = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
