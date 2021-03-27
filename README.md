@@ -21,10 +21,10 @@ Presents the user with a set of questions and answers to choose from. Based on t
 
 ## Technologies Used
 
-* _HTML_
-* _CSS_
-* _JavaScript_
-* _VSCode_
+* HTML
+* CSS
+* JavaScript
+* VSCode
 
 ## Setup/Installation Requirements
 
