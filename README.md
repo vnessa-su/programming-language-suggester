@@ -42,6 +42,7 @@ View/edit webpage locally:
 ## Known Bugs
 
 * Questions and answer still need content - currently just Lorem Ipsum placeholder text
+* After the last question there is a flicker of the See Results button to the left
 
 ## Contact Information
 
