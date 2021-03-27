@@ -23,6 +23,7 @@
 .answer-button {
   margin: 5px;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
 }
 
 .results-button {
