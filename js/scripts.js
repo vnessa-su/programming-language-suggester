@@ -37,12 +37,14 @@ $(document).ready(function(){
     
     $(this).hide();
     $("#firstQuestion").show();
+    $("#reset-button").show();
   });
 
   $(".answer-button").click(function(){
     const answerType = $(this).val();
-    console.log(answerType + " answer button pressed");
     const cardId = $(this).closest(".card").attr("id");
+
+    $(this).closest(".card").hide();
 
     if(answerType === "csharp-answer") {
       csharpCount++;
@@ -54,7 +56,6 @@ $(document).ready(function(){
       throw new Error("Invalid answer-button value: " + answerType);
     }
 
-    $(this).closest(".card").hide();
     if(cardId === "lastQuestion"){
       let resultOutputArray = determineSuggestedLanguage(csharpCount, rubyCount, javascriptCount);
       if(resultOutputArray.indexOf("C#") > -1) {
@@ -79,5 +80,15 @@ $(document).ready(function(){
   $("#seeResultsButton").click(function(){
     $(this).closest("div").hide();
     $("#suggestedLanguageDisplay").show();
-  })
+  });
+
+  $("#reset-button").click(function(event){
+    event.preventDefault();
+    csharpCount = 0;
+    rubyCount = 0;
+    javascriptCount = 0;
+
+    $(".showing-initially").show();
+    $(".hidden-initially").hide();
+  });
 });

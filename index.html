@@ -15,19 +15,22 @@
   
   <title>Programming Language Selecter</title>
 </head>
+
 <body class="bg-img page-background">
   <div class="page-header  light-text-outlined">
     <h1 class="display-4 text-center">What backend language should you learn?</h1>
   </div>
   
-  <form id="userInputForm" class="p-3 flex-column">
+  <form id="userInputForm" class="p-3 flex-column showing-initially">
     <div class="form-group">
       <input type="text" id="userName" class="form-control form-control-lg form-input" placeholder="Enter name (optional)">
     </div>
-    <button type="submit" class="btn btn-secondary btn-lg" id="startQuizButton">Start Quiz!</button>
+    <button type="submit" class="btn btn-secondary btn-lg showing-initially" id="startQuizButton">Start Quiz!</button>
   </form>
+
+  <button type="button" class="btn btn-info btn-lg fixed-bottom float-left hidden-initially" id="reset-button">Start Over</button>
   
-  <div class="card question-card" id="firstQuestion">
+  <div class="card question-card hidden-initially" id="firstQuestion">
     <div class="card-body">
       <h3 class="card-title text-center">Question 1</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -47,7 +50,7 @@
     </div>
   </div>
 
-  <div class="card question-card">
+  <div class="card question-card hidden-initially">
     <div class="card-body">
       <h3 class="card-title text-center">Question 2</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -67,7 +70,7 @@
     </div>
   </div>
 
-  <div class="card question-card">
+  <div class="card question-card hidden-initially">
     <div class="card-body">
       <h3 class="card-title text-center">Question 3</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -87,7 +90,7 @@
     </div>
   </div>
 
-  <div class="card question-card">
+  <div class="card question-card hidden-initially">
     <div class="card-body">
       <h3 class="card-title text-center">Question 4</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -107,7 +110,7 @@
     </div>
   </div>
 
-  <div class="card question-card">
+  <div class="card question-card hidden-initially">
     <div class="card-body">
       <h3 class="card-title text-center">Question 5</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -127,7 +130,7 @@
     </div>
   </div>
 
-  <div class="card question-card" id="lastQuestion">
+  <div class="card question-card hidden-initially" id="lastQuestion">
     <div class="card-body">
       <h3 class="card-title text-center">Question 6</h3>
       <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
@@ -147,12 +150,12 @@
     </div>
   </div>
 
-  <div class="flex-column display-result" id="quizCompleteDisplay">
+  <div class="flex-column hidden-initially" id="quizCompleteDisplay">
     <h3 class="text-center light-text-outlined">You've finished the quiz<span id="userNameDisplay"></span>!</h3>
     <button type="button" class="btn btn-secondary btn-lg results-button" id="seeResultsButton">See Results!</button>
   </div>
 
-  <div class="display-result" id="suggestedLanguageDisplay">
+  <div class="hidden-initially" id="suggestedLanguageDisplay">
     <div class="container">
       <div class="row">
         <h3 class="text-center col  light-text-outlined m-3">
@@ -161,9 +164,9 @@
       </div>
 
       <div class="row">
-        <div class="col display-result" id="csharpColumn"></div>
-        <div class="col display-result" id="rubyColumn"></div>
-        <div class="col display-result" id="javascriptColumn"></div>
+        <div class="col hidden-initially" id="csharpColumn"></div>
+        <div class="col hidden-initially" id="rubyColumn"></div>
+        <div class="col hidden-initially" id="javascriptColumn"></div>
       </div>
     </div>
   </div>
