@@ -29,11 +29,14 @@ $(document).ready(function(){
   $("#userInputForm").submit(function(event){
     event.preventDefault();
     const nameInput = $("input#userName").val();
+    let nameDisplayString;
 
     if(nameInput) {
-      const nameDisplayString = ", " + nameInput;
-      $("#userNameDisplay").text(nameDisplayString);
+      nameDisplayString = ", " + nameInput;
+    } else {
+      nameDisplayString = "";
     }
+    $("#userNameDisplay").text(nameDisplayString);
     
     $(this).hide();
     $("#firstQuestion").show();
@@ -88,7 +91,9 @@ $(document).ready(function(){
     rubyCount = 0;
     javascriptCount = 0;
 
+    
     $(".showing-initially").show();
     $(".hidden-initially").hide();
+    $("#userInputForm").get(0).reset();
   });
 });
